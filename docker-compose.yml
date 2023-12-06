@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nuxt:
+    build:
+      context: ./nuxt
+      dockerfile: Dockerfile
+    container_name: nuxt
+    ports:
+      - '3000:3000'
+
+  rate-tracker:
+    build:
+      context: ./rate-tracker
+      dockerfile: Dockerfile
+    container_name: rate-tracker
+    ports:
+      - '3001:3000'
